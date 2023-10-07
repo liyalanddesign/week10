@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Planner</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Content Planner</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-0" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">SignUp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO Section -->
+    <div class="container">
+      <div class="row"></div>
+      <!-- Card -->
+      <div class="card p-5 my-4" data-bs-theme="blue">
+        <div class="card-body text-center">
+          <h1>The best Content Planner ever =)</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Section for data submitting -->
+    <section class="form-section">
+      <div class="container bg-light p-3 border rounded">
+        <div class="row g-3">
+          <div class="col">
+            <input
+              type="date"
+              id="form-date"
+              class="form-control my-3"
+              aria-label="Date"
+            />
+            <input
+              type="text"
+              id="form-title"
+              class="form-control my-3"
+              placeholder="Title"
+              aria-label="Title"
+            />
+            <input
+              type="text"
+              id="form-tags"
+              class="form-control"
+              placeholder="Tags"
+              aria-label="Tags"
+            />
+          </div>
+          <div class="col">
+            <textarea
+              id="form-description"
+              class="form-control my-3"
+              rows="4"
+              placeholder="Description"
+              aria-label="Description"
+            ></textarea>
+          </div>
+          <div class="row pt-3">
+            <div class="col-auto">
+              <button type="submit" id="formSubmit" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table with data -->
+    <div class="container">
+      <div class="row">
+        <div class="col py-5">
+          <table class="table table-striped">
+            <!-- Table Header -->
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Publish Date</th>
+                <th scope="col">Title</th>
+                <th scope="col">Tags</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody id="table-body">
+              <tr id="2">
+                <th scope="row">2</th>
+                <td>2023-10-20</td>
+                <td>CCSS in 2023</td>
+                <td>CSS, 2023, programming, style</td>
+                <td>History of CSS up to last days.</td>
+                <td>
+                  <div
+                    class="btn-group btn-group-sm"
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    <button type="button" class="btn btn-action btn-danger">
+                      Delete
+                    </button>
+                    <button type="button" class="btn btn-action btn-warning">
+                      Correct
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr id="1">
+                <th scope="row">1</th>
+                <td>2023-10-26</td>
+                <td>HTML in 2023</td>
+                <td>html, 2023, programming, it</td>
+                <td>Short story about history of HTML up to last days.</td>
+                <td>
+                  <div
+                    class="btn-group btn-group-sm"
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    <button type="button" class="btn btn-action btn-danger">
+                      Delete
+                    </button>
+                    <button type="button" class="btn btn-action btn-warning">
+                      Correct
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer bg-light p-5">
+      <div class="container">
+        <div class="row bg-light">
+          <div class="col-md-4">
+            <h6>About</h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum cupiditate molestiae ex?
+            </p>
+            <br />
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>Contacts</h6>
+            <p>+1 555 123456</p>
+            <p>info@infoplanner.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
